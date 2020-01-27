@@ -1,0 +1,72 @@
+/*body {*/
+/*    background-image: url("img/first.jpg");*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*}*/
+#item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    margin-top: 200px;
+
+}
+#item__quote {
+    font-family: 'Marck Script', cursive;
+    font-size: 70px;
+    color: #ffffff;
+    text-shadow: 4px 3px 10px #080808;
+    height: 250px;
+    margin: 0 0 10px;
+}
+#item__quote,
+#item__author,
+#item__btn,
+body {
+    opacity:0; /*Элемент полностью прозрачный (невидимый)*/
+    transition: .5s; /*Скорость перехода состояния элемента*/
+    animation: show 2.5s 1; /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+    animation-delay: .5s; /* Задержка перед началом */
+}
+
+@keyframes show{
+    0%{
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+hr {
+    background: white;
+    color: white;
+    width: 500px;
+    height: 4px;
+    border: none;
+    box-shadow: 4px 3px 10px #080808;
+}
+#item__author {
+    font-family: 'Pangolin', cursive;
+    font-size: 30px;
+    color: #ffffff;
+    text-shadow: 4px 3px 10px #080808;
+    margin: 0;
+}
+#item__btn {
+    font-family: 'Pangolin', cursive;
+    font-size: 20px;
+    width: 150px;
+    height: 30px;
+    background: rgba(60, 78, 122, .7);
+    outline: none;
+    border-radius: 10px;
+    color: #ffffff;
+    text-shadow: 4px 3px 10px #080808;
+    margin-top: 20px;
+}
+#item__btn:hover {
+    color: #a2a2a2;
+    background: rgba(0, 37, 122, 0.7);
+}
